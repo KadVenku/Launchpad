@@ -89,7 +89,8 @@ namespace Launchpad.Launcher.WindowsUI
 			downloadProgressLabel.Text = string.Empty;
 
 			// Set the window text to match the game name
-			this.Text = LocalizationCatalog.GetString("Launchpad - ") + Config.GetGameName();
+            // Kad: Removed; Title will be displayed as graphic.
+			// this.Text = LocalizationCatalog.GetString("Launchpad - ") + Config.GetGameName();
 
 			// First of all, check if we can connect to the FTP server.
 			if (!Checks.CanPatch())
@@ -194,19 +195,24 @@ namespace Launchpad.Launcher.WindowsUI
 			this.MessageLabel.Text = LocalizationCatalog.GetString("Idle");
 			this.aboutLink.Text = LocalizationCatalog.GetString("About");
 			this.PrimaryButton.Text = LocalizationCatalog.GetString("Inactive");
-			this.Text = LocalizationCatalog.GetString("Launchpad - <GameName>");
-		}
 
-		/// <summary>
-		/// Handles switching between different functionalities depending on what is visible on the button to the user, such as
-		/// * Installing
-		/// * Updating
-		/// * Repairing
-		/// * Launching
-		/// </summary>
-		/// <param name="sender">The sender.</param>
-		/// <param name="e">Empty arguments.</param>
-		private void mainButton_Click(object sender, EventArgs e)
+            // Kad: New buttons start here:
+            this.btn_exit.Text = LocalizationCatalog.GetString("Exit");
+
+            // Kad: Removed; Title will be displayed as graphic.
+            // this.Text = LocalizationCatalog.GetString("Launchpad - <GameName>");
+        }
+
+        /// <summary>
+        /// Handles switching between different functionalities depending on what is visible on the button to the user, such as
+        /// * Installing
+        /// * Updating
+        /// * Repairing
+        /// * Launching
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">Empty arguments.</param>
+        private void mainButton_Click(object sender, EventArgs e)
 		{
 			switch (Mode)
 			{
@@ -606,5 +612,11 @@ namespace Launchpad.Launcher.WindowsUI
 				SetLauncherMode(ELauncherMode.Launch, false);
 			}
 		}
-	}
+
+        // Kad: Exit Button
+        private void btn_exit_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
+        }
+    }
 }
