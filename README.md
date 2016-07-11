@@ -1,3 +1,23 @@
+Yuuzhan Vong at War Launcher
+============================
+
+Based on Jarl Gulberg's Launchpad.
+
+Adds custom installment routines for EaW Total Conversions.
+
+Additional Features [WIP/Planned]
+* Installs a full working copy of the mod without breaking your current installation of the game
+* Supports all versions of the game: 
+  * EaW + FoC seperate discs
+  * EaW + FoC single-disc Gold Pack
+  * EaW + FoC "single-disc" gog.com Gold Pack
+  * Steam EaW + FoC "single disc" Pack
+  * On-The-Fly switch between vanilla FoC and YVaW for the Steam Version
+
+Thanks to Jarl Gulberg and all contributors once more for their awesome work.
+
+Original readme can be found below:
+
 Launchpad
 =========
 
